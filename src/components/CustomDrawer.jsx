@@ -26,7 +26,7 @@ function CustomDrawer() {
                         <VStack>
                             <Button onClick={onClose}>
                                 <Link to={'/'} >
-                                    Temperature
+                                    Weather
                                 </Link>
                             </Button>
                             <Button onClick={onClose}>
