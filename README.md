@@ -1,4 +1,4 @@
-# React-Updates-App
+# DailyUpdate-React-App
 ->It is a combined web app for Weather update & Stock market.\
 ->It is made using React and Chakra UI.
 ![Web capture_31-12-2022_182236_localhost](https://user-images.githubusercontent.com/106857701/210147706-58c6d83c-c0bf-4490-9d91-174225927b32.jpeg)
