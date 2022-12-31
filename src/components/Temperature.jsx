@@ -14,7 +14,7 @@ function Temperature() {
 
   function weather(_city) {
     const fetch = async () => {
-      const { data } = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${_city}&appid=3a9125c77b48ff205d4d0ca44b71a15d&units=metric`);
+      const { data } = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${_city}&appid=3a9125c77b48ff205d4d0ca44b71a15d&units=metric`);
       if (data.name == 'Bengaluru') {
         setJson({
           city: data.name,
