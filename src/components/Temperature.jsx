@@ -67,7 +67,7 @@ function Temperature() {
   return (
     <>
       <Box minH='100vh' fontFamily={'Roboto Slab'} color='black' bgImage={`url(${bgImageLink})`} bgRepeat='no-repeat' backgroundSize="cover"
-        backgroundPosition="center">
+        backgroundPosition="center" pt={['10', '0']}>
         <Heading fontSize={['4xl', '6xl', '8xl', '9xl']} fontFamily={'Roboto Slab'} mb='5' size='4xl' textAlign='center' >
           Weather App
         </Heading>

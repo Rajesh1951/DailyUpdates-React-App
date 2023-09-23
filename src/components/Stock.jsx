@@ -20,9 +20,6 @@ function Stock() {
     name: 'HDFC BANK',
     symbol: 'HDFCBANK.BSE'
   }, {
-    name: 'HDFC',
-    symbol: 'HDFC.BSE'
-  }, {
     name: 'TCS',
     symbol: 'TCS.BSE'
   }, {
@@ -140,6 +137,7 @@ function Stock() {
     }
   }
   function handleSearch(name, symbol) {
+    console.log(name, symbol)
     setQuery('')
     setCompany({
       name,
@@ -147,6 +145,11 @@ function Stock() {
       latestPrice: 0
     })
     fetch(symbol, 7)
+  }
+  function handleBlur() {
+    setTimeout(() => {
+      setInputFocus(false)
+    }, 100);
   }
   useEffect(() => {
     if (query === '') {
@@ -180,7 +183,7 @@ function Stock() {
             value={query}
             minW={['90vw', '80vw']}
             onFocus={() => setInputFocus(true)}
-            onBlur={() => setInputFocus(false)}
+            onBlur={handleBlur}
           />
         </InputGroup>
         <Box pos='absolute'
@@ -190,13 +193,14 @@ function Stock() {
           color='black'
           zIndex='10'
         >
-          {query && isInputFocused && suggestionList &&
+          {isInputFocused && suggestionList.length > 0 &&
             suggestionList.map(e =>
               <HStack fontWeight='bold'
                 onClick={() => handleSearch(e['2. name'], e['1. symbol'])}
                 _hover={
                   { backgroundColor: '#fcf3ec' }
                 }
+                key={e['1. symbol']}
               >
                 <Box
                   textAlign='left' m='1'

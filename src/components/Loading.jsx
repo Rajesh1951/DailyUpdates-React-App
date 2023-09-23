@@ -6,7 +6,9 @@ const Loading = () => {
       top='50vh'
       left='35vw'
     >
-      <Spinner thickness='5px' style={{ width: '100px', height: '100px' }} color="white" />
+      <Spinner thickness='5px'
+        style={{ width: '100px', height: '100px' }}
+        color='green' />
     </Box>
   );
 };
