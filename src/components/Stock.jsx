@@ -137,7 +137,6 @@ function Stock() {
     }
   }
   function handleSearch(name, symbol) {
-    console.log(name, symbol)
     setQuery('')
     setCompany({
       name,
@@ -149,7 +148,7 @@ function Stock() {
   function handleBlur() {
     setTimeout(() => {
       setInputFocus(false)
-    }, 100);
+    }, 1000);
   }
   useEffect(() => {
     if (query === '') {
